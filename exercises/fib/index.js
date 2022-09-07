@@ -9,7 +9,21 @@
 //   fib(4) === 3
 
 function fib(n) {
-  "asd";
+  // const arr = [0, 1];
+  // for (let i = 2; i <= n; i++) {
+  //   const a = arr[i - 2];
+  //   const b = arr[i - 1];
+  //   arr.push(a + b);
+  // }
+
+  // return arr[n];
+
+  if (n < 2) {
+    return n;
+  }
+  return fib(n - 1) + fib(n - 2);
 }
 
 module.exports = fib;
+{
+}
