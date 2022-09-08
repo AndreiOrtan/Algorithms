@@ -22,6 +22,8 @@ function vowels(str) {
   //     }
   //   }
   //   return vowels.length;
+
+  //includes approach
   let count = 0;
   const letters = ["a", "e", "i", "o", "u"];
   for (const char of str.toLowerCase()) {
