@@ -12,20 +12,19 @@
 // Answer: [1, 3, 2]
 
 function levelWidth(root) {
-  let counters = [0];
-  const dummyArr = [root, "m"];
-  while (dummyArr.length > 1) {
-    const node = dummyArr.shift();
-
-    if (node === "m") {
+  const arr = [root, "m"];
+  const counters = [0];
+  while (arr.length > 1) {
+    const dummyArr = arr.shift();
+    if (dummyArr === "m") {
+      arr.push("m");
       counters.push(0);
-      dummyArr.push("m");
-    } else {
-      dummyArr.push(...node.children);
+    }
+    if (dummyArr.children) {
       counters[counters.length - 1]++;
+      arr.push(...dummyArr.children);
     }
   }
-
   return counters;
 }
 
